@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 .vscode
 __pycache__
+=======
+__pycache__/
+>>>>>>> 283e77a (users)
