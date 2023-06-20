@@ -95,8 +95,6 @@ class Output(QMainWindow, Ui_Form):
 
 
 
-
-
 if __name__ == "__main__":
     get_mentors()
 

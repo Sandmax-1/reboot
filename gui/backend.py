@@ -1,3 +1,9 @@
+from generate_mentors import SKILLS
+from skills_matrix import mentors, matrix
+from sklearn.metrics.pairwise import pairwise_distances
+import numpy as np
+from typing import List
+
 skills = """
 Programming
 Problem-solving
@@ -103,6 +109,17 @@ Data Governance
 import os
 import openai
 
+def generate_mentor(mentee_skills: List[str]):
+    mentee_matrix = np.array([[1 if skill in mentee_skills else 0 for skill in SKILLS]])
+    new_m = np.concatenate([mentee_matrix, matrix], axis=0)
+    distance_matrix = pairwise_distances(new_m, metric="cosine")
+    distances = distance_matrix[-1,:-1]
+    sorted_mentor_idx = np.argsort(distances)
+
+    return [mentors.iloc[idx] for idx in sorted_mentor_idx[:5]]
+
+
+
 def get_skills_from_bio(bio, num_of_skills):
     key = os.environ['openai_key']
 
@@ -141,7 +158,8 @@ def get_skills_from_bio(bio, num_of_skills):
         returned_skills = returned_skills[:-1]
         list_of_skills = returned_skills.split(", ")
     
-    return list_of_skills
+    return generate_mentor(list_of_skills)
+
 
 
 
