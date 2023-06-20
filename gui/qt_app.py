@@ -1,5 +1,6 @@
+from dataclasses import dataclass
 import sys
-
+from typing import List
 from PyQt5.QtWidgets import (
     QApplication, QDialog, QMainWindow, QMessageBox
 )
@@ -51,7 +52,13 @@ class Output(QMainWindow, Ui_Form):
             "<p>- Python</p>",
         )
 
+
+
+
+
 if __name__ == "__main__":
+    get_mentors()
+
     app = QApplication(sys.argv)
     win = Window()
     win.show()
