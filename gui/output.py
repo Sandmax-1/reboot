@@ -14,15 +14,29 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(400, 300)
+        Form.resize(400, 412)
+        self.textBrowser = QtWidgets.QTextBrowser(Form)
+        self.textBrowser.setGeometry(QtCore.QRect(70, 170, 256, 192))
+        self.textBrowser.setObjectName("textBrowser")
         self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(160, 120, 49, 16))
+        self.label.setGeometry(QtCore.QRect(90, -10, 211, 181))
+        self.label.setScaledContents(True)
         self.label.setObjectName("label")
+        self.Yes = QtWidgets.QPushButton(Form)
+        self.Yes.setGeometry(QtCore.QRect(220, 370, 75, 24))
+        self.Yes.setObjectName("Yes")
+        self.No = QtWidgets.QPushButton(Form)
+        self.No.setGeometry(QtCore.QRect(100, 370, 75, 24))
+        self.No.setObjectName("No")
 
         self.retranslateUi(Form)
+        self.No.clicked.connect(Form.no_button) # type: ignore
+        self.Yes.clicked.connect(Form.yes_button) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Hello"))
+        self.label.setText(_translate("Form", "TextLabel"))
+        self.Yes.setText(_translate("Form", "Yes"))
+        self.No.setText(_translate("Form", "No"))
