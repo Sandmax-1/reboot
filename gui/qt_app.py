@@ -23,14 +23,13 @@ class Window(QMainWindow, Ui_MainWindow):
 
     def do_a_thing(self, _):
         text_from_gui = self.textEdit.toPlainText()
-        skills = get_skills_from_bio(text_from_gui, 3)
-        print(skills)
-        people = ['derek', 'john', 'susan', 'jennifer', 'barry']
-        for ind, person in enumerate(people):
+        mentor_dataframe, list_of_skills= get_skills_from_bio(text_from_gui, 3)
+        for ind, person in enumerate(mentor_dataframe):
+            name = person['name']
+            skills = person['skills']
             self.output = Output()
             self.output.textBrowser.setText(str(skills))
             self.output.label.setPixmap(QtGui.QPixmap(people_image_list[ind]))
-            name = person
             self.output.setWindowTitle(name)
             self.output.show()
             no_user_input = True
@@ -96,8 +95,6 @@ class Output(QMainWindow, Ui_Form):
 
 
 if __name__ == "__main__":
-    get_mentors()
-
     app = QApplication(sys.argv)
     win = Window()
     win.show()

@@ -54,6 +54,6 @@ def generate_mentors(count):
     return mentors
 
 
-if __name__ == "__main__":
-    datastore_client = datastore.Client(project="de-idiomisers")
-    mentors = generate_mentors(50)
+# if __name__ == "__main__":
+#     datastore_client = datastore.Client(project="de-idiomisers")
+#     mentors = generate_mentors(50)

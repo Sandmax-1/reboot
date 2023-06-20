@@ -116,7 +116,7 @@ def generate_mentor(mentee_skills: List[str]):
     distances = distance_matrix[-1,:-1]
     sorted_mentor_idx = np.argsort(distances)
 
-    return [mentors.iloc[idx] for idx in sorted_mentor_idx[:5]]
+    return [mentors.iloc[idx] for idx in sorted_mentor_idx[:5]], mentee_skills
 
 
 
