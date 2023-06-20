@@ -17,24 +17,14 @@
    <widget class="QPushButton" name="input_button">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>320</y>
-      <width>75</width>
-      <height>24</height>
+      <x>180</x>
+      <y>380</y>
+      <width>131</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>280</y>
-      <width>113</width>
-      <height>21</height>
-     </rect>
+     <string>Find me a mentor</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -75,6 +65,29 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>290</y>
+      <width>371</width>
+      <height>71</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>260</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Write about yourself:</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -93,32 +106,16 @@
   <connection>
    <sender>input_button</sender>
    <signal>clicked()</signal>
-   <receiver>lineEdit</receiver>
-   <slot>selectAll()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>349</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>236</x>
-     <y>316</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>input_button</sender>
-   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>do_a_thing()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>258</x>
-     <y>348</y>
+     <x>215</x>
+     <y>358</y>
     </hint>
     <hint type="destinationlabel">
-     <x>257</x>
-     <y>338</y>
+     <x>353</x>
+     <y>355</y>
     </hint>
    </hints>
   </connection>
