@@ -9,6 +9,9 @@ from backend import get_skills_from_bio
 from output import Ui_Form
 from test import Ui_MainWindow
 
+people_image_list = ["gui\\person.jpg", "gui\\person_2.jpg", "gui\\person_3.jpg", "gui\\person_4.jpg", "gui\\person_5.jpg"]
+
+
 class Window(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -20,11 +23,11 @@ class Window(QMainWindow, Ui_MainWindow):
         text_from_gui = self.textEdit.toPlainText()
         skills = get_skills_from_bio(text_from_gui, 3)
         print(skills)
-        people = ['derek', 'john', 'susan']
-        for person in people:
+        people = ['derek', 'john', 'susan', 'jennifer', 'barry']
+        for ind, person in enumerate(people):
             self.output = Output()
             self.output.textBrowser.setText(str(skills))
-            self.output.label.setPixmap(QtGui.QPixmap("gui\\person.jpg"))
+            self.output.label.setPixmap(QtGui.QPixmap(people_image_list[ind]))
             name = person
             self.output.setWindowTitle(name)
             self.output.show()
@@ -45,7 +48,7 @@ class Window(QMainWindow, Ui_MainWindow):
         
         self.label_3.setText(f"Congratulations, you've found {name}!")
         self.label_3.adjustSize()
-        # self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+
         self.label_3.move(self.label_3.x() - 100, self.label_3.y())
         self.textEdit.hide()
 
