@@ -22,11 +22,21 @@ class Ui_Form(object):
         self.label.setGeometry(QtCore.QRect(90, -10, 211, 181))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
+        self.Yes = QtWidgets.QPushButton(Form)
+        self.Yes.setGeometry(QtCore.QRect(220, 370, 75, 24))
+        self.Yes.setObjectName("Yes")
+        self.No = QtWidgets.QPushButton(Form)
+        self.No.setGeometry(QtCore.QRect(100, 370, 75, 24))
+        self.No.setObjectName("No")
 
         self.retranslateUi(Form)
+        self.No.clicked.connect(Form.no_button) # type: ignore
+        self.Yes.clicked.connect(Form.yes_button) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "TextLabel"))
+        self.Yes.setText(_translate("Form", "Yes"))
+        self.No.setText(_translate("Form", "No"))

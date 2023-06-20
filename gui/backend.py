@@ -108,8 +108,7 @@ def get_skills_from_bio(bio, num_of_skills):
 
     openai.api_key = key
     # Create prompt to ask.
-    prompt = f" I have a bio of a person, can you extract the skills of this person please: {bio}. I would like the {num_of_skills} most demonstrated skills from this list: {skills} please. Remember, the skills you give me should be from the list I gave you please. Can the list be comma-separated please"
-    #print(prompt)
+    prompt = f"I have a bio of a person, can you extract the skills of this person please: {bio}. I would like the {num_of_skills} most demonstrated skills from this list: {skills} please. Remember, the skills you give me should be from the list I gave you please. Can the list be comma-separated please"#print(prompt)
     # Set up the message chain with just a single message where we (the user) ask the prompt.
     messages = [{"role": "user", "content": prompt}]
     failed_response = True

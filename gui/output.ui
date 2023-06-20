@@ -39,7 +39,70 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="Yes">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>370</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Yes</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="No">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>370</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>No</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>No</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>no_button()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>381</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>54</x>
+     <y>376</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Yes</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>yes_button()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>376</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>no_button()</slot>
+  <slot>yes_button()</slot>
+ </slots>
 </ui>
