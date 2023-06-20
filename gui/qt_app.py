@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import (
     QApplication, QDialog, QMainWindow, QMessageBox
 )
 from PyQt5.uic import loadUi
-
+from backend import get_skills_from_bio
 from test import Ui_MainWindow
 
 class Window(QMainWindow, Ui_MainWindow):
@@ -15,8 +15,9 @@ class Window(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
     def do_a_thing(self, _):
-        a = self.lineEdit.text()
-        print(a)
+        text_from_gui = self.lineEdit.text()
+        skills = get_skills_from_bio(text_from_gui, 3)
+        print(skills)
 
     def about(self):
         QMessageBox.about(

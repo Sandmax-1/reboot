@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'test.ui'
+# Form implementation generated from reading ui file 'gui/test.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -26,13 +26,13 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(20, 20, 151, 181))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("mentr.png"))
+        self.label.setPixmap(QtGui.QPixmap("gui\\mentr.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(250, 40, 181, 111))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("lloyds.png"))
+        self.label_2.setPixmap(QtGui.QPixmap("gui\\lloyds.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         MainWindow.setCentralWidget(self.centralwidget)
