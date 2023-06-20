@@ -3,6 +3,7 @@ import sys
 from PyQt5.QtWidgets import (
     QApplication, QDialog, QMainWindow, QMessageBox
 )
+from PyQt5 import QtGui
 from PyQt5.uic import loadUi
 from backend import get_skills_from_bio
 from output import Ui_Form
@@ -20,7 +21,10 @@ class Window(QMainWindow, Ui_MainWindow):
         skills = get_skills_from_bio(text_from_gui, 3)
         print(skills)
         self.output = Output()
-        self.output.label.setText(str(skills))
+        self.output.textBrowser.setText(str(skills))
+        self.output.label.setPixmap(QtGui.QPixmap("gui\\person.jpg"))
+        name = 'derek'
+        self.output.setWindowTitle(name)
         self.output.show()
 
     def about(self):

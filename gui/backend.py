@@ -112,9 +112,24 @@ def get_skills_from_bio(bio, num_of_skills):
     #print(prompt)
     # Set up the message chain with just a single message where we (the user) ask the prompt.
     messages = [{"role": "user", "content": prompt}]
-    
-    # Get the response via API call.
-    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages, temperature=0.0)
+    failed_response = True
+    counter = 0
+    response = None
+    while failed_response and counter < 10:
+        try:
+            counter += 1
+            # Get the response via API call.
+            response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages, temperature=0.0)
+            failed_response = False
+
+        except:
+            pass
+        
+    print(counter)
+    if not response:
+        returned_skills = ['Teamwork', 'Problem-solving', 'Critical Thinking']
+        return returned_skills
+
 
     # Pull out the returned content.
     returned_skills = response.choices[0].message["content"]
