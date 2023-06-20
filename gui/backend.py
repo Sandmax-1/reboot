@@ -1,103 +1,104 @@
 skills = """
-Teamwork skills
-Interpersonal skills
-Empathy/compassion
-Active listening
-Patience
-Understanding body language
-Ability to quickly build relationships
-Team building
-Diplomacy
-Persuasion
-Conflict resolution
-Reconciliation
-Personable
-Customer service skills
-Positive attitude
-Respectful
-Proper business etiquette
-Capable of networking
-Capable of mentoring/teaching
-Ability to collaborate
-Capable of exchanging ideas
-Encourages other team members
-A sense of humour
-Client-oriented
-Time management
-Decision-making skills
-Planning
-Task delegation skills
-Flexibility
-Ability to multitask
-Punctuality
-Capable of meeting deadlines
-Scheduling
-Capable of prioritising tasks
-Problem-solving skills
-Creative thinking
-Critical thinking
-Quick learner
-Attention to detail
-Focus
-Attentive
-Rational
-Ability to brainstorm
-Inspiration
-Desire to experiment with new ideas
-Meticulous
-Deductive reasoning (top-down thinking)
-Inductive reasoning (bottom-down thinking)
-Modesty
-Observant
-Introspection
-Self-aware
-High energy
-Dedication
-Knows how to follow instructions
-A good work ethic
-Loyalty
-Integrity
-Reliable
-Disciplined
-Committed
-Honesty
-Thoughtful
-Enthusiasm
+Programming
+Problem-solving
+Critical Thinking
+Collaboration
+Communication
 Adaptability
-Stress management
-Ability to negotiate
-Public speaking
-Trustworthiness
-Ability to handle criticism
-Efficiency
-Innovation
-Control over emotions
-Resilience
-Ambition
-Presentation skills
-Capable of giving feedback
-Inspiring
-Assertive
-Resourceful
-Determination
-Self-confident
-Responsible
-Self-management
-Open-minded
-Diligent
-Insightful
-Capable of questioning ideas
-Self-control
-Know when to take responsibility
-Independent
-Physical endurance/stamina
-Motivation
-Computer skills
-Tolerant of change
-Aware of social issues
-Love to learn/curious
-Culturally sensitive
-A solid understanding of social media
+Project Management
+Technical Documentation
+Cybersecurity
+Data Analysis
+Agile Methodologies
+Cloud Computing
+Machine Learning and AI
+Database Management
+UX/UI Design
+Networking
+DevOps
+Mobile Development
+Quality Assurance
+Version Control
+Data Visualization
+Web Development
+Software Architecture
+API Design and Integration
+Systems Administration
+Scripting
+Performance Optimization
+Test Automation
+Big Data Analytics
+Information Security
+Front-end Development
+Back-end Development
+Data Modeling
+Statistical Analysis
+Natural Language Processing
+Object-Oriented Programming
+Software Testing
+Continuous Integration/Continuous Deployment (CI/CD)
+Cloud Architecture
+Data Mining
+Server Management
+Virtualization Technologies
+Technical Support
+Algorithm Design
+Distributed Systems
+Mobile App Design
+Usability Testing
+Quality Management
+Predictive Analytics
+Data Warehousing
+API Development
+User Research
+Data Cleansing
+Information Retrieval
+Embedded Systems
+Software Deployment
+Data Governance
+Performance Monitoring
+Network Security
+Full-Stack Development
+Software Refactoring
+Machine Vision
+Continuous Improvement
+Scalability Design
+Information Architecture
+Ethical Hacking
+Mobile Device Management
+Software Debugging
+Geospatial Analysis
+Neural Networks
+Systems Integration
+Cross-functional Collaboration
+Cloud Storage
+Data Privacy
+API Management
+User Experience Optimization
+Content Management Systems (CMS)
+Front-end Frameworks (e.g., React, Angular)
+Back-end Frameworks (e.g., Django, Laravel)
+Business Intelligence
+Data Science
+IT Service Management
+Systems Monitoring
+UI/UX Prototyping
+Quality Control
+Data Encryption
+Web Scraping
+Natural Language Generation
+Data Transformation
+Mobile Security
+Robotic Process Automation (RPA)
+High Availability Systems
+Cloud Orchestration
+Data Storage Solutions
+Continuous Delivery
+Software Licensing
+Data Backup and Recovery
+Geolocation Services
+API Security
+Data Governance
 """
 import os
 import openai
